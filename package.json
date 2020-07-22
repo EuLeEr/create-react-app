@@ -1,0 +1,42 @@
+{
+  "name": "create-react-app-material-ui",
+  "version": "4.0.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.9.1",
+    "clsx": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "## How to use",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [
+    "usial",
+    "CRA",
+    "material-ui",
+    "material-ui/icon"
+  ],
+  "author": "Eugene Ermolov",
+  "license": "ISC"
+}

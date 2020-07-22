@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "firefox",
+        "request": "launch",
+        "reAttach": true,
+        "name": "Launch in Firefox",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}/src"
+      },
+      {
+        "name": "Chromium",
+        //"type": "chrome",
+        "runtimeExecutable": "/usr/bin/chromium-browser",  
+        "request": "launch",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}/src",
+        "sourceMapPathOverrides": {
+          "webpack:///src/*": "${webRoot}/*"
+        }
+      }
+    ]
+  }
