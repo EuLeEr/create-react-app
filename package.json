@@ -30,7 +30,9 @@
   },
   "description": "## How to use",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "faker": "^4.1.0"
+  },
   "keywords": [
     "usial",
     "CRA",
