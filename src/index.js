@@ -5,12 +5,15 @@ import { ThemeProvider } from "@material-ui/core/styles";
 // eslint-disable-next-line
 import App from "./App";
 //import Component from "./stale-while-revalidate";
-import Component from "./Stale-while-refresh";
+//import Component from "./Stale-while-refresh";
 import theme from "./theme";
 // eslint-disable-next-line
 import Pricing from "./pricing";
 import "./slyles.css";
-import Component2 from "./Component2";
+//import Component2 from "./Component2";
+//last commit
+import Component from "./ComponentWithHookWithCommon";
+import Component2 from "./Component2WithHookWithCommon";
 
 class Appx extends React.Component {
   state = { page: 1, page2: 1 };
