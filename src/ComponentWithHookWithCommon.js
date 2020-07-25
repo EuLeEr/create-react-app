@@ -1,10 +1,20 @@
 import React from "react";
-import useStaleRefresh from "./useStaleRefresh";
+import PropTypes from "prop-types";
+import useStaleRefresh from "./useStaleRefreshUniverse";
+import apiFetch from "./apiFetch";
 
 export default function Component({ page }) {
-  const users = useStaleRefresh(`https://reqres.in/api/users?page=${page}`, []);
+  const [users, isLoading] = useStaleRefresh(
+    apiFetch,
+    [`https://reqres.in/api/users?page=${page}`],
+    { data: [] }
+  );
 
-  const usersDOM = users.map((user) => (
+  if (isLoading) {
+    return <div>Loading</div>;
+  }
+
+  const usersDOM = users.data.map((user) => (
     <p key={user.id}>
       <img
         src={user.avatar}
@@ -17,3 +27,7 @@ export default function Component({ page }) {
 
   return <div>{usersDOM}</div>;
 }
+
+Component.propTypes = {
+  page: PropTypes.number.isRequired,
+};

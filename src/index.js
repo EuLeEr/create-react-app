@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -15,11 +15,14 @@ import "./slyles.css";
 import Component from "./ComponentWithHookWithCommon";
 import Component2 from "./Component2WithHookWithCommon";
 
-class Appx extends React.Component {
-  state = { page: 1, page2: 1 };
-  render() {
-    return (
-      /*
+//class Appx extends React.Component {
+// state = { page: 1, page2: 1 };
+function Appx() {
+  const [page, setPage] = useState(1);
+  const [page2, setPage2] = useState(1);
+  //render() {
+  return (
+    /*
       <div className="Appx">
         <Component page={this.state.page} />
         <button
@@ -32,7 +35,7 @@ class Appx extends React.Component {
           Toggle
         </button>
       </div>*/
-      <div className="Appx">
+    /*      <div className="Appx">
         <div>
           <Component page={this.state.page} />
           <button
@@ -57,9 +60,19 @@ class Appx extends React.Component {
             Change
           </button>
         </div>
+      </div> */
+    <div className="Appx">
+      <div>
+        <Component page={page} />
+        <button onClick={() => setPage(page === 2 ? 1 : 2)}>Toggle</button>
       </div>
-    );
-  }
+      <div>
+        <Component2 page={page2} />
+        <button onClick={() => setPage2(page2 === 2 ? 1 : 2)}>Toggle</button>
+      </div>
+    </div>
+  );
+  //}
 }
 
 ReactDOM.render(
